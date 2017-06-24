@@ -1,7 +1,7 @@
 # 6.0002 Problem Set 2
 # Graph optimization
 # Name: Trinh Trung Dung
-# Time:
+# Time: 4 hours
 
 import unittest
 
