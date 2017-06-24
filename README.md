@@ -8,12 +8,12 @@
 	<li><a href="https://www.edx.org/">edx</a></li>
 </ul>
 <p>I also added the guideline pdf file named as MIT6_0002F16_ProblemSet2</p>
-<p>This repository contains 4 files in total, included 1 .pdf file, 1 .txt files, 2 .py files:</p>
+<p>This repository contains 4 files in total, included 1 .pdf file, 1 .txt file, 2 .py files:</p>
 <ol>
-  <li>MIT6_0002F16_ProblemSet2 contains the requirements of this problem set</li>
-  <li>mit_map includes information about an MIT campus map</li>
-  <li>graph is a set of graph-related data structures (<a href="https://en.wikipedia.org/wiki/Directed_graph">Digraph</a>, <a href="https://en.wikipedia.org/wiki/Vertex_(graph_theory)">Node</a>, <a href="http://mathworld.wolfram.com/GraphEdge.html">Edge</a>)</li>
-  <li>ps2 is the code skeleton</li>
+ 	<li>MIT6_0002F16_ProblemSet2 contains the requirements of this problem set</li>
+ 	<li>mit_map includes information about an MIT campus map</li>
+ 	<li>graph is a set of graph-related data structures (<a href="https://en.wikipedia.org/wiki/Directed_graph">Digraph</a>, <a href="https://en.wikipedia.org/wiki/Vertex_(graph_theory)">Node</a>, <a href="http://mathworld.wolfram.com/GraphEdge.html">Edge</a>)</li>
+ 	<li>ps2 is the code skeleton</li>
 </ol>
 <h3>License:</h3>
 <p>This course is under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Common License</a></p>
