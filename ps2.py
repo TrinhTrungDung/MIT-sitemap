@@ -19,7 +19,9 @@ from graph import Digraph, Node, WeightedEdge
 # represented?
 #
 # Answer:
-#
+# - The graph's nodes represent the buildings in MIT sitemap
+# - The graph's edges represent the direction from starting location to ending location
+# - The distances represent how long we must take to get from start building to the end building
 
 
 # Problem 2b: Implementing load_map
