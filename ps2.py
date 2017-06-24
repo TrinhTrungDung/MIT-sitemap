@@ -44,31 +44,50 @@ def load_map(map_filename):
         a Digraph representing the map
     """
     print("Loading map from file...")
+    # initialize a digraph g representing the map
+    g = Digraph()
+    # open the file contains map data
     with open(map_filename) as file:
+        # read data per line and store it into a list
         read_data = file.read().split("\n")
+        # the list contains an unnecessary newline character at the end
         read_data = read_data[:-1]
-        site_map = {}
+        # loop through each entry in data list
         for entry in read_data:
+            # split each entry into source, destination nodes, total_distance and outdoor_distance
+            # and store them into a list
             raw_data = entry.split(" ")
-            src = raw_data[0]
-            dest = raw_data[1]
+            # src = source node, dest = destination, total = total_distance, outdoor = outdoor_distance
+            src = Node(raw_data[0])
+            dest = Node(raw_data[1])
             total = int(raw_data[2])
             outdoor = int(raw_data[3])
-            if src not in site_map:
-                site_map[src] = []
-            else:
-                site_map[src].append((dest, total, outdoor))
-            
+            # check if g already has node src or not
+            if not g.has_node(src):
+                g.add_node(src)
+            # check if g already has node dest or not
+            if not g.has_node(dest):
+                g.add_node(dest)
+            # initialize a weighted edge
+            edge = WeightedEdge(src, dest, total, outdoor)
+            # add above edge into g
+            g.add_edge(edge)
+    # close file
     file.close()
-    
-    return site_map
-    
-print(load_map("mit_map.txt"))
-# Problem 2c: Testing load_map
-# Include the lines used to test load_map below, but comment them out
+    # return the desired directed graph
+    return g
+
+#==============================================================================
+# # Problem 2c: Testing load_map
+# # Include the lines used to test test_load_map data below, but comment them out
+# graph = load_map("test_load_map.txt")
+# print(graph)
+# # Include the lines used to test mit_map data
+# mit_graph = load_map("mit_map.txt")
+# print(mit_graph)
+#==============================================================================
 
 
-#
 # Problem 3: Finding the Shorest Path using Optimized Search Method
 #
 # Problem 3a: Objective function
@@ -153,7 +172,7 @@ def directed_dfs(digraph, start, end, max_total_dist, max_dist_outdoors):
 # ================================================================
 # Begin tests -- you do not need to modify anything below this line
 # ================================================================
-
+"""
 class Ps2Test(unittest.TestCase):
     LARGE_DIST = 99999
 
@@ -236,3 +255,4 @@ class Ps2Test(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+"""
