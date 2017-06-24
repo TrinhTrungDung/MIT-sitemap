@@ -55,7 +55,7 @@ def load_map(map_filename):
         # loop through each entry in data list
         for entry in read_data:
             # split each entry into source, destination nodes, total_distance and outdoor_distance
-            # and store them into a list
+            # and store them into a list respectively
             raw_data = entry.split(" ")
             # src = source node, dest = destination, total = total_distance, outdoor = outdoor_distance
             src = Node(raw_data[0])
