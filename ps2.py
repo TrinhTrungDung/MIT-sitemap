@@ -41,10 +41,27 @@ def load_map(map_filename):
     Returns:
         a Digraph representing the map
     """
-
-    # TODO
     print("Loading map from file...")
-
+    with open(map_filename) as file:
+        read_data = file.read().split("\n")
+        read_data = read_data[:-1]
+        site_map = {}
+        for entry in read_data:
+            raw_data = entry.split(" ")
+            src = raw_data[0]
+            dest = raw_data[1]
+            total = int(raw_data[2])
+            outdoor = int(raw_data[3])
+            if src not in site_map:
+                site_map[src] = []
+            else:
+                site_map[src].append((dest, total, outdoor))
+            
+    file.close()
+    
+    return site_map
+    
+print(load_map("mit_map.txt"))
 # Problem 2c: Testing load_map
 # Include the lines used to test load_map below, but comment them out
 
